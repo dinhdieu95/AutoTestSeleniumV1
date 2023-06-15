@@ -7,6 +7,7 @@ public class Bai2Duc { //Viết chương trình Java sử dụng vòng lặp whi
     public static void printResult(){
         String input;
         char option = 0;
+        String obtionString = "0";
         do{
             System.out.println("Nhập thứ bạn muốn để in ra: ");
             Scanner sc = new Scanner(System.in);
@@ -19,7 +20,13 @@ public class Bai2Duc { //Viết chương trình Java sử dụng vòng lặp whi
                 option = sc.next().charAt(0);
             }
 
+//            while (!obtionString.equalsIgnoreCase("N") && !obtionString.equalsIgnoreCase("y") ) {
+//                System.out.println("Nhập lại lựa chọn ha: ");
+//                obtionString = sc.next();
+//            }
         } while (option != 'N' && option != 'n');
+
+// do { xử lý } while (điều kiện dừng) ;
         System.out.println("Thanks");
     }
 

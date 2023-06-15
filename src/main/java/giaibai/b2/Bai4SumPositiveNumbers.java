@@ -13,14 +13,13 @@ public class Bai4SumPositiveNumbers {
 
         while (true) {
             System.out.print("Nhập số nguyên dương: ");
-            number = scanner.nextInt();
+            number = scanner.nextInt();//  round 2   12  round 3 = 0
 
-            if (number == 0) {
-                break;
+            if (number <= 0) {
+                break; // thực hiện round 3
             }
-
-            if (number > 0) {
-                sum += number;
+            else {
+                sum += number; // round 1` : sum = 0 + 13   round 2 sum = 13 + 12 = 25
             }
         }
 
