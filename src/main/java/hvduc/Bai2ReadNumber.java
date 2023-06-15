@@ -15,7 +15,7 @@ public class Bai2ReadNumber {
         } while (number != 0);
 
         scanner.close();
-        System.out.println("Chương trình kết thúc.");
+//        System.out.println("Chương trình kết thúc.");
     }
 
 }
