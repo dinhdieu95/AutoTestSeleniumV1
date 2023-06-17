@@ -1,4 +1,4 @@
-package giaibai.b3;
+package hv.ntyen.b3;
 //Viết chương trình để tìm số lớn nhất trong một mảng số nguyên.
 public class Bai3 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package giaibai.b3;
+package hv.ntyen.b3;
 
 import java.util.ArrayList;
 import java.util.Scanner;
