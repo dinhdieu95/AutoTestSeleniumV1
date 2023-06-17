@@ -21,6 +21,7 @@ public class Bai4SumPositiveNumbers {
             else {
                 sum += number; // round 1` : sum = 0 + 13   round 2 sum = 13 + 12 = 25
             }
+
         }
 
         System.out.println("Tổng các số dương: " + sum);
