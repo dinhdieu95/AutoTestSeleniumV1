@@ -1,9 +1,17 @@
 package hv.ntyen.b3;
+
+import java.util.Scanner;
+
 //Viết chương trình để tìm số lớn nhất trong một mảng số nguyên.
 public class Bai3 {
     public static void main(String[] args) {
-        int [] num = {1,4,2,3,0};
-        System.out.println("Cho mang so nguyen: ");
+        int [] num = new int[5];
+        Scanner s = new Scanner(System.in);
+        for (int i = 0 ; i < num.length ; i++){
+            System.out.println("Nhap phan tu thu " + i);
+            num[i] = s.nextInt();
+        }
+        System.out.println("Mang so nguyen vừa nhập là: ");
         for (int i = 0 ; i<num.length ; i++){
             System.out.println(num[i]);
         }
