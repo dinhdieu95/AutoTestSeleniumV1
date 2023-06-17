@@ -1,7 +1,5 @@
 package hv.ntyen.b3;
 
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Scanner;
 
 //Cho một danh sách các chuỗi, viết chương trình để xóa tất cả các chuỗi trùng lặp trong danh sách đó.
@@ -10,14 +8,15 @@ public class Bai7 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhap so luong của mang: ");
         int n = scanner.nextInt();
-        String  arr[]= new String[n];
+        String[] arr = new String[n];
         for (int i = 0 ; i < n ; i++){
             System.out.println("Nhap phan tu thu " + i);
             arr[i] = scanner.next();
         }
-        String brr[] = new String[n];// khai báo mảng brr để chứa phần tử sau khi loại phần tử lặp
+        String[] brr;// khai báo mảng brr để chứa phần tử sau khi loại phần tử lặp
+        brr = new String[n];
         int bsize = 0; //đếm các phần tử của mảng brr
-        boolean isExist = false; // biến check xem đã tồn tại trong mảng brr hay chưa
+        boolean isExist; // biến check xem đã tồn tại trong mảng brr hay chưa
         brr[0] = arr[0]; // gán phần tử đầu tiền của mảng brr bằng phần tử đầu tiên của mảng arr
         bsize++;
         for (int i = 0 ; i < arr.length ; i++){ // Duyet lần lượt các phâần tử trong mảng arr
@@ -32,9 +31,8 @@ public class Bai7 {
                 brr[bsize] = arr[i]; // gán phần tử chưa tồn tại vào brr
                 bsize++;
             }
-
         }
-        // in các phần tủ mảng brr
+        // in các phần tử mảng brr
         System.out.println("mang sau khi da loai phan tu trung: ");
         for (int i = 0; i< bsize; i++){
             System.out.println(brr[i]);

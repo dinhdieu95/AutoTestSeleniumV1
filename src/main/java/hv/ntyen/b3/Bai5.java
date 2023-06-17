@@ -17,9 +17,5 @@ public class Bai5 {
         arr.sort(Comparator.naturalOrder());
         System.out.println("Danh sach chuoi sap xep theo thu tu tang dan:");
         System.out.println(arr);
-//        for (int index = 0 ; index < arr.size(); index++){
-//             string temp = arr.set(index);
-//            System.out.println(arr);
-//        }
     }
 }

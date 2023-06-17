@@ -26,8 +26,6 @@ public class Bai2 {
         for (int i = 0; i<num.length ; i++){
             System.out.println(+Math.pow(num[i],2));
         }
-
-
     }
 
 

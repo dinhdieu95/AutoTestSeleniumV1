@@ -14,10 +14,8 @@ public class Bai6 {
             int n = s.nextInt();
             arr.add(n);
         }
-
         System.out.println("Danh sach cac so vua nhap:");
         System.out.println(arr);
-
         arr.sort(Comparator.naturalOrder());
         System.out.println("So lon nhat la: " + arr.get(arr.size() - 1));
         System.out.println("So nho nhat la: " + arr.get(0));

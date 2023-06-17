@@ -13,17 +13,9 @@ public class Bai4 {
             for (int j = i + 1 ; j< num.length ; j++){
                 tong = num[i]+num[j];
                 if (tong == n) {
-//                    System.out.println("Phan tu trong mang có tong bang " + n +" la phan tu co gia tri bang " +num[i] +" va phan tu co gia tri bang "+ num[j]);
                     System.out.println("Phan tu trong mang có tong bang " + n +" la phan tu o vi tri thu [" +i +"] va phan tu o vi tri thu ["+ j + "]");
-
                 }
-
             }
-//            System.out.println("Tong 2 phan tu trong mang : " + tong);
-//            if (tong = n){
-
-
-
         }
 
     }

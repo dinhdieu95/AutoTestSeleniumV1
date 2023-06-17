@@ -15,10 +15,8 @@ public class Bai3 {
                     num[j] = max_index;
                     max_index = num [i];
                 }
-
             }
         }
-
         System.out.println("So lon nhat cua mang la : " + num[0]);
 
     }
