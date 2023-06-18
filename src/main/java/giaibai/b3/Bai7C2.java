@@ -15,7 +15,7 @@ public class Bai7C2 {
         System.out.print("Nhập số lượng chuỗi trong danh sách: ");
 
         int n = scanner.nextInt();
-
+//   \n
         scanner.nextLine(); // Đọc bỏ dòng new line sau khi nhập số lượng
 
         System.out.println("Nhập các chuỗi vào danh sách:");
@@ -23,7 +23,6 @@ public class Bai7C2 {
         for (int i = 0; i < n; i++) {
 
             String str = scanner.nextLine();
-
             stringList.add(str);
 
         }
