@@ -1,4 +1,4 @@
-package hanhttm_bt_javacore;
+package hanhttm_bt_javacore.array;
 
 //sử dụng vòng lặp do-while để in ra các số chẵn từ 2 đến 100.
 public class Bai11DoWhite {

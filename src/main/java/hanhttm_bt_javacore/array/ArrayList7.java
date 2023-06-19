@@ -1,4 +1,4 @@
-package hanhttm_bt_javacore;
+package hanhttm_bt_javacore.array;
 
 import java.util.ArrayList;
 import java.util.Comparator;
