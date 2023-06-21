@@ -1,4 +1,4 @@
-package hv.ntyen.b3;
+package hv.ntyen.b3_Array;
 // Viết chương trình Java sử dụng vòng lặp do-while để in ra các số chẵn từ 2 đến 100.
 public class Bai11 {
     public static void main(String[] args) {

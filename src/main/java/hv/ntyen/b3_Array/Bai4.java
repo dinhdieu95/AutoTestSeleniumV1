@@ -1,4 +1,4 @@
-package hv.ntyen.b3;
+package hv.ntyen.b3_Array;
 //Cho một mảng các số nguyên, viết chương trình để tìm và in ra các cặp phần tử có tổng bằng một số đã cho.
 public class Bai4 {
     public static void main(String[] args) {

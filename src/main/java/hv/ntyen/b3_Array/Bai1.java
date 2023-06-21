@@ -1,9 +1,9 @@
-package hv.ntyen.b3;
+package hv.ntyen.b3_Array;
 
 import java.util.Scanner;
 
-//Viết chương trình để tìm số lớn nhất trong một mảng số nguyên.
-public class Bai3 {
+//Viết chương trình nhập vào một mảng các số nguyên và sắp xếp chúng theo thứ tự giảm dần.
+public class Bai1 {
     public static void main(String[] args) {
         int [] num = new int[5];
         Scanner s = new Scanner(System.in);
@@ -23,9 +23,13 @@ public class Bai3 {
                     num[j] = max_index;
                     max_index = num [i];
                 }
+
             }
         }
-        System.out.println("So lon nhat cua mang la : " + num[0]);
+        System.out.println("mang duoc sap xep theo thu tu giam dan la: ");
+        for (int x: num){
+            System.out.println(x);
+        }
 
     }
 

@@ -1,4 +1,4 @@
-package hv.ntyen.b3;
+package hv.ntyen.b3_Array;
 
 import java.util.Scanner;
 
