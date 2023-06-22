@@ -12,11 +12,11 @@
             jdbc:oracle:thin:@10.7.2.201:1521/tcbssit
         </property>
         <property name="hibernate.connection.username">
-            TCINVESTSIT
+            SYS
+<!--            SYSTEM, PDBADMIN-->
         </property>
-
         <property name="hibernate.connection.password">
-            d34ZfGSVxWLoe4WP
+            123456
         </property>
         <!--        <mapping class="common.database.tcinvest.entity.InvHoliday"/>-->
 
