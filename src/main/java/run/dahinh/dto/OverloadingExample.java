@@ -6,10 +6,9 @@ public class OverloadingExample {
         return a + b;
 
     }
+    public static int add(float a, float b) {
 
-    public static int add(int a, int b, int c) {
-
-        return a + b + c;
+        return  (int)(a + b);
 
     }
     public double add(double a, double b) {
@@ -17,4 +16,15 @@ public class OverloadingExample {
         return a + b;
 
     }
+    public static int add(int a, int b, int c) {
+
+        return a + b + c;
+
+    }
+//    public static void add(int a, int b, int c) {
+//
+//        System.out.println( a + b + c);;
+//
+//    }
+
 }

@@ -19,6 +19,7 @@ public class DaHinhRunTime {
 
     }
 }
+
 class Bank {
 
     int getRateOfInterest() {
@@ -30,7 +31,7 @@ class Bank {
 }
 
 class SBI extends Bank {
-
+    @Override
     int getRateOfInterest() {
 
         return 8;
@@ -40,7 +41,7 @@ class SBI extends Bank {
 }
 
 class ICICI extends Bank {
-
+    @Override
     int getRateOfInterest() {
 
         return 7;
@@ -50,7 +51,7 @@ class ICICI extends Bank {
 }
 
 class AXIS extends Bank {
-
+    @Override
     int getRateOfInterest() {
 
         return 9;

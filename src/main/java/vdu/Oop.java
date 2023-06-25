@@ -23,7 +23,7 @@ public class Oop {
         HinhVuong hinh = new HinhVuong();
         System.out.println("Diện tích hình vuông là " );
         hinh.tinhDienTich();
-        hinh.setCanh1(3d);
+//        hinh.setCanh1(3d);
         System.out.println("Diện tích hình vuông là " );
         hinh.tinhDienTich();
 
