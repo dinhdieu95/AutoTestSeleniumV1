@@ -1,6 +1,5 @@
 package run.db;
 
-import database.connection.SetFactory;
 import database.entity.Employee;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -13,6 +12,7 @@ import java.util.List;
 
 public class ManageEmployee {
     private static SessionFactory factory;
+
     public static void main(String[] args) {
 
         try {
@@ -25,7 +25,7 @@ public class ManageEmployee {
         ManageEmployee ME = new ManageEmployee();
 
         /* Add few employee records in database */
-        Integer empID1 = ME.addEmployee(1,"Zara", "Ali", 1000);
+        Integer empID1 = ME.addEmployee(1, "Zara", "Ali", 1000);
         Integer empID2 = ME.addEmployee(2, "Daisy", "Das", 5000);
         Integer empID3 = ME.addEmployee(3, "John", "Paul", 10000);
 
@@ -44,7 +44,7 @@ public class ManageEmployee {
     }
 
     /* Method to CREATE an employee in the database */
-    public Integer addEmployee(int id, String fname, String lname, int salary){
+    public Integer addEmployee(int id, String fname, String lname, int salary) {
         Session session = factory.openSession();
         Transaction tx = null;
         Integer employeeID = null;
@@ -55,7 +55,7 @@ public class ManageEmployee {
             employeeID = (Integer) session.save(employee);
             tx.commit();
         } catch (HibernateException e) {
-            if (tx!=null) tx.rollback();
+            if (tx != null) tx.rollback();
             e.printStackTrace();
         } finally {
             session.close();
@@ -64,14 +64,14 @@ public class ManageEmployee {
     }
 
     /* Method to  READ all the employees */
-    public void listEmployees( ){
+    public void listEmployees() {
         Session session = factory.openSession();
         Transaction tx = null;
 
         try {
             tx = session.beginTransaction();
             List employees = session.createQuery("FROM Employee").list();
-            for (Iterator iterator = employees.iterator(); iterator.hasNext();){
+            for (Iterator iterator = employees.iterator(); iterator.hasNext(); ) {
                 Employee employee = (Employee) iterator.next();
                 System.out.print("First Name: " + employee.getFirstName());
                 System.out.print("  Last Name: " + employee.getLastName());
@@ -79,7 +79,7 @@ public class ManageEmployee {
             }
             tx.commit();
         } catch (HibernateException e) {
-            if (tx!=null) tx.rollback();
+            if (tx != null) tx.rollback();
             e.printStackTrace();
         } finally {
             session.close();
@@ -87,18 +87,18 @@ public class ManageEmployee {
     }
 
     /* Method to UPDATE salary for an employee */
-    public void updateEmployee(Integer EmployeeID, int salary ){
+    public void updateEmployee(Integer EmployeeID, int salary) {
         Session session = factory.openSession();
         Transaction tx = null;
 
         try {
             tx = session.beginTransaction();
-            Employee employee = (Employee)session.get(Employee.class, EmployeeID);
-            employee.setSalary( salary );
+            Employee employee = (Employee) session.get(Employee.class, EmployeeID);
+            employee.setSalary(salary);
             session.update(employee);
             tx.commit();
         } catch (HibernateException e) {
-            if (tx!=null) tx.rollback();
+            if (tx != null) tx.rollback();
             e.printStackTrace();
         } finally {
             session.close();
@@ -106,17 +106,17 @@ public class ManageEmployee {
     }
 
     /* Method to DELETE an employee from the records */
-    public void deleteEmployee(Integer EmployeeID){
+    public void deleteEmployee(Integer EmployeeID) {
         Session session = factory.openSession();
         Transaction tx = null;
 
         try {
             tx = session.beginTransaction();
-            Employee employee = (Employee)session.get(Employee.class, EmployeeID);
+            Employee employee = (Employee) session.get(Employee.class, EmployeeID);
             session.delete(employee);
             tx.commit();
         } catch (HibernateException e) {
-            if (tx!=null) tx.rollback();
+            if (tx != null) tx.rollback();
             e.printStackTrace();
         } finally {
             session.close();
