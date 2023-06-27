@@ -66,8 +66,6 @@ public class Student {
     }
 
     public void setCourses(ArrayList<String> courses) {
-
         this.courses = courses;
-
     }
 }
