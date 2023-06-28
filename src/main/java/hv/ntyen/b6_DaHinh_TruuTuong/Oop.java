@@ -14,5 +14,13 @@ public class Oop {
         Rectangle r = new Rectangle(2d, 5d);
         System.out.print("Diện tích hình chữ nhật là: ");
         r.getArea(2d, 5d);
+        System.out.println("---Bài 5------------------------------ ");
+        Circle c = new Circle(20d,30d, 40d);
+        c.getArea();
+        System.out.println("---Bài 6------------------------------ ");
+        BankAccount b = new BankAccount(1000000000l);
+        System.out.println("Số dư hiện tại trong tài khoản là: "+b.balance);
+        b.deposit();
+        b.withdraw();
     }
 }

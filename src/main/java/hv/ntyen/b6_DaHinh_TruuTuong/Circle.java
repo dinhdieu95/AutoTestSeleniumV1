@@ -5,6 +5,8 @@ public class Circle extends Rectangle {
     public Circle(double width, double height, double radius) {
         super(width, height);
         this.radius = radius;
-
+    }
+    public void getArea(){
+        System.out.println("Diện tích hình tròn là: " +Math.PI*this.radius*this.radius);
     }
 }
