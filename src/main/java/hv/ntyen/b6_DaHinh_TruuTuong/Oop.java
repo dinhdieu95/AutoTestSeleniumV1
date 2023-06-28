@@ -1,5 +1,7 @@
 package hv.ntyen.b6_DaHinh_TruuTuong;
 
+import hv.ntyen.b5_KeThua_DongGoi.Bai5_Car;
+
 public class Oop {
     public static void main(String[] args) {
         System.out.println("---Bài 1-2------------------------------ ");
@@ -22,5 +24,18 @@ public class Oop {
         System.out.println("Số dư hiện tại trong tài khoản là: "+b.balance);
         b.deposit();
         b.withdraw();
+        System.out.println("---Bài 7------------------------------ ");
+        System.out.println("Thông tin xe :");
+        Car car = new Car("Thai Lan", "M20A-FKS", 2023, 1100000000d);
+        System.out.println("make: " +car.getMake());
+        System.out.println("model: " +car.getModel());
+        System.out.println("year: " +car.getYear());
+        System.out.println("price: " +car.getPrice());
+        System.out.println("---Bài 8-9------------------------------ ");
+        Employee e = new Employee("Yến", 18, "Nữ", 5000000, "A001");
+        System.out.println("Thông tin Employee: ");
+        e.displayInfo();
+        System.out.println("---Bài 10------------------------------ ");
+        e.increaseSalary();
     }
 }
