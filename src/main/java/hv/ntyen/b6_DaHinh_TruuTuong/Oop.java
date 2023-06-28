@@ -37,5 +37,12 @@ public class Oop {
         e.displayInfo();
         System.out.println("---Bài 10------------------------------ ");
         e.increaseSalary();
+        System.out.println("---Bài 11------------------------------ ");
+        Dog d = new Dog();
+        Cat cat = new Cat();
+        Cow cow = new Cow();
+        d.makeSound();
+        cat.makeSound();
+        cow.makeSound();
     }
 }
