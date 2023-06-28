@@ -28,5 +28,16 @@ public class Rectangle {
         double area = width*height;
         System.out.println(area);
     }
+    public double calculateArea(){
+        double chieuDai = 3;
+        double chieuRong = 5;
+        return chieuDai * chieuRong;
+    }
+    public int calculateArea(int side){
+        return side * side;
+    }
+    public int calculateArea(int with, int length){
+        return with*length;
+    }
 
 }

@@ -44,5 +44,10 @@ public class Oop {
         d.makeSound();
         cat.makeSound();
         cow.makeSound();
+        System.out.println("---Bài 12------------------------------ ");
+        System.out.println("calculateArea(): " +r.calculateArea());
+        System.out.println("calculateArea(int Side): "+r.calculateArea(10));
+        System.out.println("calculateArea(int with, int length): " +r.calculateArea(5,10));
+
     }
 }
