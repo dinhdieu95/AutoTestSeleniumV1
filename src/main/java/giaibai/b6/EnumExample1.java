@@ -30,6 +30,6 @@ public class EnumExample1 {
 
         Season season1 = Season.FALL;
 
-        System.out.println(season.getValue()); 
+        System.out.println(season.getValue());
     }
 }
