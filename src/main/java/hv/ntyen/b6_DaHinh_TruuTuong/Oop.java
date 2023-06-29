@@ -65,5 +65,10 @@ public class Oop {
         manager.lamViec();
         engineer.chamCong();
         engineer.lamViec();
+        System.out.println("---Bài 14------------------------------ ");
+        HighSchoolStudent highSchoolStudent = new HighSchoolStudent();
+        CollegeStudent collegeStudent = new CollegeStudent();
+        highSchoolStudent.goToSchool();
+        collegeStudent.goToSchool();
     }
 }
