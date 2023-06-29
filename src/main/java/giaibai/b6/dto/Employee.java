@@ -11,6 +11,7 @@ public class Employee {
         this.age = age;
         this.salary = salary;
         this.id = id;
+//        this.getAge();
     }
 
     public void displayInfo() {

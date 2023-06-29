@@ -1,9 +1,10 @@
 package giaibai.b6.bai13;
 
 public class DatabaseManager {
-    private static final int MAX_CONNECTIONS = 10;
+    private static int MAX_CONNECTIONS = 10;
 
     public static int getMaxConnections() {
+//        MAX_CONNECTIONS = 20;
         return MAX_CONNECTIONS;
     }
 

@@ -1,6 +1,6 @@
 package giaibai.b6.bai12;
 
-public class MathUtils {
+public final class MathUtils {
     private MathUtils() {
         // Lớp final không thể được kế thừa, nên chúng ta sẽ ngăn chặn việc khởi tạo đối tượng MathUtils bằng cách tạo constructor private.
     }

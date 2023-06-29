@@ -20,6 +20,7 @@ public class Rectangle {
     public int calculateArea(int length, int width) {
         return length * width;
     }
+    //tính đa hình compile  nạp chồng phương thức
 
     public static void main(String[] args) {
         Rectangle rectangle = new Rectangle(4, 5);
@@ -32,7 +33,7 @@ public class Rectangle {
 
         int length = 6;
         int width = 7;
-        int area3 = rectangle.calculateArea(length, width);
+        int area3 = rectangle.calculateArea(length, width);// crtl + chuôtj trái => link tới function đang gọi
         System.out.println("Area of rectangle with different length and width: " + area3);
     }
 }
