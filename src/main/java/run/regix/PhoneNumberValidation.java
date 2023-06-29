@@ -20,7 +20,7 @@ public class PhoneNumberValidation {
 
     public static boolean isValidPhoneNumber(String phoneNumber) {
         // Định nghĩa biểu thức chính quy kiểm tra số điện thoại
-        String regex = "^(0|\\+84)[0-9]{9,10}$";
+        String regex = "^(0|\\+84)[0-9a-z]{8,11}$";
 
         // Tạo đối tượng Pattern từ biểu thức chính quy
         Pattern pattern = Pattern.compile(regex);

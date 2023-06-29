@@ -34,5 +34,9 @@ public class Bai10C3 {
             }
             System.out.println();
         }
+
     }
+
+
 }
+//

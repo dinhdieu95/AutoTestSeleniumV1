@@ -15,7 +15,7 @@ public class Bai10 {
 
             int num = 1;
 
-            System.out.printf("%" + (numRows - i) * 2 + "s", ""); // Thêm khoảng trống
+//            System.out.printf("%" + (numRows - i) * 2 + "s", ""); // Thêm khoảng trống
 
             for (int j = 0; j <= i; j++) {
 
