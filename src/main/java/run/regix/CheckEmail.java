@@ -4,23 +4,23 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PhoneNumberValidation {
+public class CheckEmail {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Nhập số điện thoại: ");
+        System.out.print("Nhập email: ");
         String phoneNumber = scanner.nextLine();
 
         if (isValidPhoneNumber(phoneNumber)) {
-            System.out.println("Số điện thoại hợp lệ");
+            System.out.println("email hợp lệ");
         } else {
-            System.out.println("Số điện thoại không hợp lệ");
+            System.out.println("email không hợp lệ");
         }
     }
 
     public static boolean isValidPhoneNumber(String phoneNumber) {
-        // Định nghĩa biểu thức chính quy kiểm tra số điện thoại
-        String regex = "^(0|\\+84)[0-9a-z]{8,11}$";
+        // Định nghĩa biểu thức chính quy kiểm tra email
+        String regex = "^[0-9a-zA-Z]+@[0-9a-zA-Z]+\\*[0-9a-zA-Z]$";
 
         // Tạo đối tượng Pattern từ biểu thức chính quy
         Pattern pattern = Pattern.compile(regex);
@@ -31,5 +31,4 @@ public class PhoneNumberValidation {
         // Kiểm tra xem chuỗi có khớp với biểu thức chính quy hay không
         return matcher.matches();
     }
-
 }

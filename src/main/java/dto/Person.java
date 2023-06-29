@@ -26,10 +26,72 @@ public class Person {
     public void setCmnd(String cmnd) {
         this.cmnd = cmnd;
     }
+
     public String getHoTen() {
         return hoTen;
     }
+
     public void setHoTen(String hoTen) {
         this.hoTen = hoTen;
+    }
+
+    private String mieng = "Mieng"; //thuộc tính
+    private String chan = "2chan"; //thuộc tính
+    public String test = "check_public";
+    protected String test_protect = "Test_protect";
+
+    public String getTest() {
+        return test;
+    }
+
+//    public String getTest_protect() {
+//        return test_protect;
+//    }
+
+    public String getMieng() {
+        return mieng;
+    }
+
+    public String getChan() {
+        return chan;
+    }
+
+    public void an() {// phương thức của đối tượng
+        System.out.println("Ăn bằng miệng" + mieng);
+
+    }
+
+    public boolean run() { // run là tên phương thức
+        return chan.equals("2chan") ? true : false;
+    }
+
+    public boolean run(Person dieu) { // run là tên phương thức
+        String giay = "1 cai";
+        return dieu.getChan().equals("2chan") ? true : false;
+    }
+
+    public Person(String cmnd) {
+        this.cmnd = cmnd;
+    }
+
+    public Person() {
+    }
+
+    public Person(String cmnd, String hoTen, String mieng) {
+        this.cmnd = cmnd;
+        this.hoTen = hoTen;
+        this.mieng = mieng;
+    }
+
+//    @Override
+    public String toChuoi() {
+        return "Person{" +
+                "cmnd='" + cmnd + '\'' +
+                ", hoTen='" + hoTen + '\'' +
+                ", mieng='" + mieng + '\'' +
+                ", chan='" + chan + '\'' +
+                ", test='" + test + '\'' +
+                ", test_protect='" + test_protect + '\'' +
+                '}';
     }
 }
