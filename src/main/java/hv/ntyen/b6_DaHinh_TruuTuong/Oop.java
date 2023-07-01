@@ -70,5 +70,14 @@ public class Oop {
         CollegeStudent collegeStudent = new CollegeStudent();
         highSchoolStudent.goToSchool();
         collegeStudent.goToSchool();
+        System.out.println("---Bài 15------------------------------ ");
+        ImmutablePerson immutablePerson = new ImmutablePerson("Yến", 18);
+        System.out.println("immutablePerson.getName: "+immutablePerson.getName());
+        System.out.println("immutablePerson.getAge: "+immutablePerson.getAge());
+        System.out.println("---Bài 16------------------------------ ");
+        CircleExtendsShape circleExtendsShape = new CircleExtendsShape(10d);
+        RectangleExtendsShape rectangleExtendsShape = new RectangleExtendsShape(10, 15);
+        System.out.println("diện tích hình tròn bán kính = 10: " +circleExtendsShape.calculateAreaImpl());
+        System.out.println("diện tích hình chữ nhật 10x15: " +rectangleExtendsShape.calculateAreaImpl());
     }
 }
