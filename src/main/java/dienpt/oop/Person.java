@@ -1,5 +1,7 @@
 package dienpt.oop;
 
+import java.util.ArrayList;
+
 public class Person {
 
     private String name ;
@@ -37,23 +39,5 @@ public class Person {
 
     public void setGender(String gender) {
         this.gender = gender;
-    }
-
-    public void displayInfo(){
-        System.out.println("Tên là " + this.name + "Tuổi " + this.age + " Giới tính" + this.gender );
-    }
-
-    public static void main(String[] args) {
-         //Khong truyen  tham so --Khoi taoj contructor khong tham so
-        Person coca = new Person();
-        coca.setName("Coca");
-        coca.setAge(2);
-        coca.setGender("Nam");
-        coca.displayInfo();
-
-        //Truyen  tham so --Khoi taoj contructor co tham so
-        Person dien  = new Person("Dien",28,"Nu");//Khoi tao class person
-        dien.displayInfo(); //Goi ham trong person
-
     }
 }
