@@ -5,7 +5,13 @@ import java.util.Scanner;
 public class SumInteger {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
+
+        try{
+            int a = scanner.nextInt();
+        } catch (NullPointerException e){
+            System.out.println("Nhap so duong");
+        }
+
         int b = scanner.nextInt();
 
     }
