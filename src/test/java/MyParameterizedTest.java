@@ -48,17 +48,18 @@ public class MyParameterizedTest {
     public Object[][] testData() throws IOException {
         List<Object[]> data = new ArrayList<>();
 
+        FileReader fileReader = new FileReader(System.getProperty("user.dir") + "/src/test/resources/test_data.csv");
         // Read the CSV file
-        BufferedReader reader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "/src/test/resources/test_data.csv"));
+        BufferedReader reader = new BufferedReader(fileReader);
 
         // Read the column names from the first line (header)
         String headerLine = reader.readLine();
-        String[] headers = headerLine.split(",");
+        String[] headers = headerLine.split("|");
 
         // Read the test data rows
         String dataLine;
         while ((dataLine = reader.readLine()) != null) {
-            String[] values = dataLine.split(",");
+            String[] values = dataLine.split("|");
             Object[] testData = new Object[values.length];
 
             // Convert each value to the appropriate data type
@@ -84,6 +85,8 @@ public class MyParameterizedTest {
 
         return data.toArray(new Object[data.size()][]);
     }
+//    "|"
+//    junit @UseCSVProvider
     @Test(dataProvider = "testData")
     public void testSomething(int id, String first_name, String last_name, int salary) {
         // Use the test data in your test logic
