@@ -23,6 +23,7 @@ public class ExceptionHandlingExample {
                 System.out.println(line);
             }
         } finally {
+            System.out.println("Tiep tục khối final");
             if (reader != null) {
                 try {
                     reader.close();
