@@ -53,7 +53,7 @@ public class HocSinhMoi {
 
     public static void ghiDanhSachHocSinhVaoFile(HocSinh[] danhSachHocSinh) {
         try {
-            FileWriter fileWriter = new FileWriter("hocsinh.txt", true); // Mở file để ghi tiếp vào cuối file
+            FileWriter fileWriter = new FileWriter("hocsinh.txt", true);
             PrintWriter printWriter = new PrintWriter(fileWriter);
 
             for (HocSinh hocSinh : danhSachHocSinh) {
