@@ -1,12 +1,15 @@
 package database.entity;
 
 import org.hibernate.Session;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
 import java.sql.PreparedStatement;
 
-@Entity
-@Table(name = "EMPLOYEE")
+@Entity // 1 entity trong DB
+@Table(name = "EMPLOYEE") // mapping với bản
+@Cacheable
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE) // layer thứ 2
 public class Employee {
     @Id
 //    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "employee_seq")
@@ -70,5 +73,14 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
-   
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", first_name='" + first_name + '\'' +
+                ", last_name='" + last_name + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
 }
