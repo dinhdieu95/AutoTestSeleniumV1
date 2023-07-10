@@ -8,7 +8,7 @@ public class LinkedHashMapExample {
         Map<String, Integer> populationByCity = new LinkedHashMap<>();
 
         // Thêm cặp khóa-giá trị vào LinkedHashMap
-        populationByCity.put("New York", 8537673);
+        populationByCity.put("New York", 8537673);//key, value
         populationByCity.put("Los Angeles", 3979576);
         populationByCity.put("Chicago", 2704958);
 

@@ -15,9 +15,23 @@ public class HashMapExample {
         int score = studentScores.get("Bob");
         System.out.println("Điểm số của Bob là: " + score);
 
+        System.out.println("Truoc khi xoa phan tu: ");
+        print(studentScores);
+
+
+
         // Xóa một cặp khóa-giá trị
         studentScores.remove("Alice");
 
+        System.out.println("Sau khi xoa phan tu: ");
+        // Duyệt qua các cặp khóa-giá trị trong HashMap
+        for (Map.Entry<String, Integer> entry : studentScores.entrySet()) {
+            String student = entry.getKey();
+            int studentScore = entry.getValue();
+            System.out.println("Điểm số của " + student + " là: " + studentScore);
+        }
+    }
+    public static void print(Map<String, Integer> studentScores){
         // Duyệt qua các cặp khóa-giá trị trong HashMap
         for (Map.Entry<String, Integer> entry : studentScores.entrySet()) {
             String student = entry.getKey();

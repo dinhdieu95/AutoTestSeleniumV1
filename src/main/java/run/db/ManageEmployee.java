@@ -93,7 +93,7 @@ public class ManageEmployee {
 //  sử dụng Ehcache để tạo và quản lý cache.
 //  thời gian sống của mục trong cache
 //  Ehcache -> kiểm tra xem dữ liệu có trong cache -> có lấy trong cache -> không lấy trong DB
-//  bình thường hay có lỗi kiểmtra trong DB ko còn dữ liệu mà app vẫn trả ra
+//  bình thường hay có lỗi kiểm tra trong DB ko còn dữ liệu mà app vẫn trả ra
 //  => ( có thể do cơ chế cache này)
             tx.commit();
         } catch (HibernateException e) {

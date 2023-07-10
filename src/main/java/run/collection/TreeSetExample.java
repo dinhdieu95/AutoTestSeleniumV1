@@ -12,6 +12,7 @@ public class TreeSetExample {
         names.add("Charlie");
         names.add("David");
         names.add("Eva");
+        names.add("Alice");
 
         System.out.println("Các tên được sắp xếp theo thứ tự tăng dần:");
         for (String name : names) {
