@@ -1,6 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import selenium.page.SearchByText;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -24,6 +25,13 @@ public class TestSearchByText {
 //        openFile(url);
         WebElement withText = switchTo().activeElement().findElement(By.xpath("//*[contains(text(), \"abcd\")]"));
         System.out.println(withText.isDisplayed());
+    }
+
+    @Test
+    public void checkObject(){
+        SearchByText test = new SearchByText(switchTo().window(0));
+        test.setWithText("Dropdown list");
+        System.out.println(test.getWithText().isDisplayed());
     }
 
 }
