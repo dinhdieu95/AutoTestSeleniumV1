@@ -16,13 +16,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import static selenium.common.Common.CONFIG_DRIVER_CHROME;
+import static selenium.common.Common.URL_SRC_CHROME;
+
 public class TestSelenium {
     private WebDriver driver;
     private Map<String, Object> vars;
     JavascriptExecutor js;
     @Test
     public void login() {
-        System.setProperty("webdriver.chrome.driver",  System.getProperty("user.dir") + "/src/test/resources/driver/chromedriver.exe");
+        System.setProperty(CONFIG_DRIVER_CHROME,  URL_SRC_CHROME);
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.browserstack.com/users/sign_in");
