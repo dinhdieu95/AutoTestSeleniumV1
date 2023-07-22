@@ -1,3 +1,5 @@
+package selenium;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import selenium.page.SearchBy;
