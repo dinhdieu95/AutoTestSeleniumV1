@@ -26,7 +26,7 @@ public class SwitchWindow {
 
         String MainWindow = driver.getWindowHandle();
 
-        // To handle all new opened window.
+        // function lấy ra tất cả các window của  minhf
         Set<String> s1 = driver.getWindowHandles();
         Iterator<String> i1 = s1.iterator();
 

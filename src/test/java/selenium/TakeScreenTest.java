@@ -21,11 +21,11 @@ public class TakeScreenTest {
         System.setProperty(CONFIG_DRIVER_CHROME, URL_SRC_CHROME);
         driver = new ChromeDriver();
 
-        // Alert Message handling
-
+        //  điều hướng tới trang web
         driver.get("https://demo.guru99.com/test/delete_customer.php");
+
         // Tạo đối tượng TakesScreenshot từ đối tượng WebDriver để chụp ảnh màn hình
-        TakesScreenshot scrShot = ((TakesScreenshot) driver);
+        TakesScreenshot scrShot = ((TakesScreenshot) driver); // class để chụp lại màn hình
 
         // Gọi phương thức getScreenshotAs để tạo tệp ảnh
         File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
