@@ -1,0 +1,1 @@
+[hocsinh{id=1, name='Nam', sdt='034121', Class='4'}, hocsinh{id=2, name='Nu', sdt='03431121', Class='9'}]
