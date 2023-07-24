@@ -28,8 +28,8 @@ public class Bai4 {
         System.out.println("\nNhập X là tổng của 2 cặp số trong mảng: ");
         int x = sc.nextInt();
         for (int i = 0; i < arr.length; i++){
-            for (int j = 0; j < arr.length; j++){
-                if (arr[i] + arr[j] == x && arr[i] != arr[j] ){
+            for (int j = i; j < arr.length; j++){
+                if (arr[i] + arr[j] == x && arr[i] != arr[j]){
                     System.out.println("[" +arr[i] + "]" + "[" +arr[j] + "]");
                 }
             }
