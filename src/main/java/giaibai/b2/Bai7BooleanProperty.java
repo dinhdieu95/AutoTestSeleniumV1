@@ -1,6 +1,6 @@
 package giaibai.b2;
 
-import javafx.beans.property.BooleanProperty;
+//import javafx.beans.property.BooleanProperty;
 
 public class Bai7BooleanProperty {
     private boolean myBoolean;
