@@ -9,10 +9,11 @@ public class ExceptionHandlingExampleTryCatch {
         } catch (ArithmeticException e) {
             // Xử lý ngoại lệ cụ thể (ArithmeticException)
             System.out.println("Lỗi chia cho 0: " + e.getMessage());
-        } finally {
-            // Mã được thực thi sau khi khối "try" và "catch" kết thúc
-            System.out.println("Khối finally được thực thi.");
         }
+//        finally {
+//            // Mã được thực thi sau khi khối "try" và "catch" kết thúc
+//            System.out.println("Khối finally được thực thi.");
+//        }
     }
 
     public static int divide(int a, int b) {

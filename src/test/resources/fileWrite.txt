@@ -1,2 +1,3 @@
 Dòng thứ nhất
-Dòng thứ haiDòng tiếp theo được nối vào
+Dòng thứ hai
+12
