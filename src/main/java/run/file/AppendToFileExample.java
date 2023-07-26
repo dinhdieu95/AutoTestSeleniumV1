@@ -8,7 +8,7 @@ import java.io.IOException;
 public class AppendToFileExample {
     public static void main(String[] args) {
         try {
-            String path = System.getProperty("user.dir") + "/src/test/resources/fileWrite.txt";
+            String path = System.getProperty("user.dir") + "/src/main/resources/fileWrite.txt";
             File file = new File(path); // Thay đổi đường dẫn và tên tệp tin tùy ý
 
             FileWriter fileWriter = new FileWriter(file, true); // Mở chế độ ghi nối (append mode)

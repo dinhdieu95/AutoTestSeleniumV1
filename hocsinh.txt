@@ -1,5 +1,4 @@
-1,Yến,0912345678,12A
-2,Mai,0912345699,12B
-3,lan,0912345633,12C
-4,Trang,0912345644,12D
-HocSinh{id='5', name='Chi', classs='12D', phone=0632152241}
+1,Nguyen Van A,1234567890,10A
+2,Tran Thi B,0987654321,11B
+3,Le Van C,9876543210,12C
+HocSinh{id=1, name='Nguyen Van A', sdt='1234567890', classs='10A'}
