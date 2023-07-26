@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static selenium.common.Common.getSource;
 
-final class CheckboxTest {
+public class CheckboxTest {
     @BeforeTest
     void openTestPageWithJQuery() {
         open(getSource() + "page_with_selects_without_jquery.html");
