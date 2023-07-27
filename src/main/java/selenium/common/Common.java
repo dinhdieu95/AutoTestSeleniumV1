@@ -2,8 +2,17 @@ package selenium.common;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class Common {
     //    public SOURCE_URL = System.getProperty("user.dir") + "/src/test/resources/";
@@ -29,5 +38,15 @@ public class Common {
 
     public static String getSource() {
         return System.getProperty("user.dir") + "/src/test/resources/";
+    }
+    public static void wait(WebDriver driver, long timeout ){
+        driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
+    }
+    public static void fluentWait(WebDriver driver, long timeout , String data){
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+                .withTimeout(Duration.ofSeconds(timeout))
+                .pollingEvery(Duration.ofSeconds(5))
+                .ignoring(NoSuchElementException.class);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(data)));
     }
 }

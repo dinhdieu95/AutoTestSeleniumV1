@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
+import selenium.common.Common;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +16,7 @@ import static selenium.common.Common.URL_SRC_CHROME;
 
 public class ShopeeAutomation {
     JavascriptExecutor js;
-    WebDriver driver;
+    private static WebDriver driver;
     @Test
     public  void test() throws Exception{
         System.setProperty(CONFIG_DRIVER_CHROME, URL_SRC_CHROME);
@@ -58,7 +59,8 @@ public class ShopeeAutomation {
 
         // Lọc sản phẩm theo giá từ 10 triệu đến 15 triệu
         driver.get("https://shopee.vn/search?keyword=iphone");
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+        Common.wait(driver, 15);
         WebElement minPriceInput = driver.findElement(By.xpath("//input[@class='shopee-price-range-filter__input'][1]"));
         WebElement maxPriceInput = driver.findElement(By.xpath("//input[@class='shopee-price-range-filter__input'][2]"));
         minPriceInput.sendKeys("10000000");
