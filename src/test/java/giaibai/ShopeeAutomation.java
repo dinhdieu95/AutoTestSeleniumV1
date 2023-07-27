@@ -57,14 +57,20 @@ public class ShopeeAutomation {
         searchBox.submit();
 
         // Lọc sản phẩm theo giá từ 10 triệu đến 15 triệu
-
+        driver.get("https://shopee.vn/search?keyword=iphone");
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         WebElement minPriceInput = driver.findElement(By.xpath("//input[@class='shopee-price-range-filter__input'][1]"));
         WebElement maxPriceInput = driver.findElement(By.xpath("//input[@class='shopee-price-range-filter__input'][2]"));
         minPriceInput.sendKeys("10000000");
         maxPriceInput.sendKeys("15000000");
-        maxPriceInput.submit();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//button[@class='shopee-button-solid shopee-button-solid--primary hdzZKE']")).click();
+//        maxPriceInput.submit();
+        driver.findElement(By.xpath("//input[@placeholder='Mật khẩu']")).sendKeys("110196aB");
+        driver.findElement(By.xpath("//input[@placeholder='Email/Số điện thoại/Tên đăng nhập']")).sendKeys("0989056630");
+        driver.findElement(By.xpath("//button[text() = 'Đăng nhập']")).click();
 
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         // Sắp xếp sản phẩm theo giá từ cao đến thấp
         WebElement sortDropdown = driver.findElement(By.xpath("//select[@name='sort']"));
         sortDropdown.sendKeys("giá từ cao đến thấp");
