@@ -25,6 +25,7 @@ public class JqueryToolTipTest {
 
         builder.clickAndHold().moveToElement(download);
         builder.moveToElement(download).build().perform();
+//        builder.clickAndHold().build().perform();
 
         WebElement toolTipElement = driver.findElement(By.xpath(".//*[@class='box']/div/a"));
         String actualTooltip = toolTipElement.getText();
