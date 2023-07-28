@@ -68,7 +68,7 @@ public class ShopeeAutomation {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//button[@class='shopee-button-solid shopee-button-solid--primary hdzZKE']")).click();
 //        maxPriceInput.submit();
-        driver.findElement(By.xpath("//input[@placeholder='Mật khẩu']")).sendKeys("110196aB");
+        driver.findElement(By.xpath("//input[@placeholder='Mật khẩu']")).sendKeys("matkhau");
         driver.findElement(By.xpath("//input[@placeholder='Email/Số điện thoại/Tên đăng nhập']")).sendKeys("0989056630");
         driver.findElement(By.xpath("//button[text() = 'Đăng nhập']")).click();
 
