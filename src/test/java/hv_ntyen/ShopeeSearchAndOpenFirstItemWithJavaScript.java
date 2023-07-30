@@ -17,7 +17,11 @@ public class ShopeeSearchAndOpenFirstItemWithJavaScript {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://shopee.vn/");
         //  Đóng thông báo
-        String jsCode1 = "document.getElementsByclassName('shopee-popup__close-btn')[0].click();";
+        WebElement shadowHost = driver.findElement(By.id("main"));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(shadowHost, 0, 0).click().perform();
+
+      //  String jsCode1 = "document.getElementsByclassName('shopee-popup__close-btn')[0].click();";
 
 
         //Tìm kiếm trên trang chủ
