@@ -1,3 +1,5 @@
+package hv.ntyen.b11_Selenium;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import selenium.page.SearchBy;

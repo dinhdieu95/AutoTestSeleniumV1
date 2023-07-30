@@ -30,4 +30,7 @@ public class Common {
     public static String getSource() {
         return System.getProperty("user.dir") + "/src/test/resources/";
     }
+
+    public static void wait(WebDriver driver, int nanos) {
+    }
 }
