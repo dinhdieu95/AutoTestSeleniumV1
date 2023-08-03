@@ -20,6 +20,11 @@ public class ShopeeSearchAndOpenFirstItemWithJavaScript {
         WebElement shadowHost = driver.findElement(By.id("main"));
         Actions actions = new Actions(driver);
         actions.moveToElement(shadowHost, 0, 0).click().perform();
+//        public WebElement getShadowRootElement(WebElement element) {
+//            WebElement ele = (WebElement) ((JavascriptExecutor)driver)
+//                    .executeScript("return arguments[0].shadowRoot", element);
+//            return ele;
+//        }
 
       //  String jsCode1 = "document.getElementsByclassName('shopee-popup__close-btn')[0].click();";
 
