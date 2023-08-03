@@ -10,6 +10,7 @@ public class TikiHomePage {
     private WebDriver driver;
 
     @FindBy(xpath = "//*[@data-view-id='main_search_form_input']")
+    // tìm kiếm phần tử bằng xpath và giá trị của xpath
     private WebElement searchInput;
 
 //    @FindBys(xpath = "//*[@data-view-id='main_search_form_button']")
