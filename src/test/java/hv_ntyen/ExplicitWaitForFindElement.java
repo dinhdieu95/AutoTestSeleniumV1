@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.Keys;
 
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
@@ -20,10 +21,11 @@ public class ExplicitWaitForFindElement {
         System.setProperty(CONFIG_DRIVER_CHROME, URL_SRC_CHROME);
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com/");
-        driver.findElement(By.name("q")).sendKeys("scrooltest");
+        driver.findElement(By.name("q")).sendKeys("scrooltest" + Keys.ENTER);
         WebElement firstResult = new WebDriverWait(driver, 10)
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
         System.out.println(firstResult.getText());
-
+        firstResult.click();
+        driver.quit();
     }
 }

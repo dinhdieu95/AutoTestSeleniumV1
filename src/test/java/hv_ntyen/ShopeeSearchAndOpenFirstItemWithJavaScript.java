@@ -3,6 +3,8 @@ package hv_ntyen;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,17 +19,13 @@ public class ShopeeSearchAndOpenFirstItemWithJavaScript {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://shopee.vn/");
         //  Đóng thông báo
-        WebElement shadowHost = driver.findElement(By.id("main"));
-        Actions actions = new Actions(driver);
-        actions.moveToElement(shadowHost, 0, 0).click().perform();
-//        public WebElement getShadowRootElement(WebElement element) {
-//            WebElement ele = (WebElement) ((JavascriptExecutor)driver)
-//                    .executeScript("return arguments[0].shadowRoot", element);
-//            return ele;
-//        }
-
-      //  String jsCode1 = "document.getElementsByclassName('shopee-popup__close-btn')[0].click();";
-
+//        WebElement shadowHost = driver.findElement(By.id("main"));
+//        Actions actions = new Actions(driver);
+//        actions.moveToElement(shadowHost, 0, 0).click().perform();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        Alert until = wait.until(ExpectedConditions.alertIsPresent());
+        System.out.println(until.getText());
+        until.accept();
 
         //Tìm kiếm trên trang chủ
         String xpathSearch = "//input[@class='shopee-searchbar-input__input']";
