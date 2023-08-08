@@ -20,6 +20,7 @@ public class TikiHomePageFindBysTest {
 
         // Continue with other test steps
 
+        System.out.println(driver.getPageSource().toUpperCase()) ;
         driver.quit();
     }
 }

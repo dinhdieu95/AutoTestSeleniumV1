@@ -3,7 +3,6 @@ package pom.page.annotation;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class TikiHomePage {
@@ -13,7 +12,7 @@ public class TikiHomePage {
     // tìm kiếm phần tử bằng xpath và giá trị của xpath
     private WebElement searchInput;
 
-//    @FindBys(xpath = "//*[@data-view-id='main_search_form_button']")
+    //    @FindBys(xpath = "//*[@data-view-id='main_search_form_button']")
     @FindBy(xpath = "//*[@data-view-id='main_search_form_button']")
     private WebElement searchButton;
 

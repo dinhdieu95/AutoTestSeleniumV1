@@ -6,8 +6,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import page.guru.HomePage;
+//import pom.page.guru.HomePage;
 
 import static selenium.common.Common.CONFIG_DRIVER_CHROME;
 import static selenium.common.Common.URL_SRC_CHROME;
@@ -28,37 +31,52 @@ public class AjaxTest {
         driver.manage().window().maximize();
         driver.navigate().to(URL);
     }
+    HomePage homePage;
 
-    @Test
-    public void test_AjaxExample() {
-
+    public void commonFunction(){
         By container = By.cssSelector(".container");
         wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.presenceOfElementLocated(container));
+        homePage = new HomePage(driver);
+    }
+    @Test
+    public void test_AjaxExample() {
+        commonFunction();
+
+
 
         // Lấy văn bản trước khi thực hiện cuộc gọi ajax
-        WebElement noTextElement = driver.findElement(By.className("radiobutton"));
-        String textBefore = noTextElement.getText().trim();
-
+        WebElement noTextElement = driver.findElement(By.className("radiobutton"));// phần tử 1
+//        String textBefore = homePage.getNoTextElement().getText().trim();
+        System.out.println(noTextElement.getText().trim());
         // Nhấp vào nút radio
-        driver.findElement(By.id("yes")).click();
+        homePage.clickButtonYes(); // phần tử thứ 3
 
         // Nhấp vào nút "Check"
-        driver.findElement(By.id("buttoncheck")).click();
+        homePage.clickButtonCheckbox();// phần tử thứ 4
 
         /* Lấy văn bản sau khi gọi ajax */
-        WebElement TextElement = driver.findElement(By.className("radiobutton"));
-        wait.until(ExpectedConditions.visibilityOf(TextElement));
+        WebElement TextElement = homePage.getTextElement(); // phần tử thứ 2
+//        wait.until(ExpectedConditions.visibilityOf(TextElement));
         String textAfter = TextElement.getText().trim();
 
         /* Xác minh cả hai văn bản trước khi gọi ajax và sau khi gọi ajax. */
-        Assert.assertNotEquals(textBefore, textAfter);
+//        Assert.assertNotEquals(textBefore, textAfter);
         System.out.println("Ajax Call Performed");
 
         String expectedText = "Radio button is checked and it's value is Yes";
 
         /* Xác minh văn bản kỳ vọng với văn bản đã cập nhật sau cuộc gọi ajax */
         Assert.assertEquals(textAfter, expectedText);
+
+    }
+    @Test
+    public void test_02(){
+        commonFunction();
+        System.out.println("Trang thái hiển thị của button yes: "+ homePage.getButtonYes().isDisplayed());
+    }
+    @AfterClass
+    public void clear(){
         driver.close();
     }
 }

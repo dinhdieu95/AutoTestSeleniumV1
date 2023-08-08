@@ -35,6 +35,8 @@ public class ShopeeAutomation {
         js.executeScript("window.scrollTo(0,380.79998779296875)");
         js.executeScript("window.scrollTo(0,500)");
 
+        WebElement qcPopup = (WebElement) js.executeScript("return document.querySelector('shopee-banner-popup-stateful').shadowRoot.querySelector('div > div > div > div > div')");
+        qcPopup.click();
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("shopee-banner-popup-stateful")));
 //        WebElement popupCloseButton = driver.findElement(By.xpath("//button[@class='shopee-popup__close-btn']"));
 //        Actions actions = new Actions(driver);
