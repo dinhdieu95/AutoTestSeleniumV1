@@ -16,28 +16,26 @@ public class ShopeeSearchAndOpenFirstItemWithJavaScript {
         System.setProperty(CONFIG_DRIVER_CHROME, URL_SRC_CHROME);
         WebDriver driver = new ChromeDriver();
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://shopee.vn/");
+        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         //  Đóng thông báo
-//        WebElement shadowHost = driver.findElement(By.id("main"));
-//        Actions actions = new Actions(driver);
-//        actions.moveToElement(shadowHost, 0, 0).click().perform();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        Alert until = wait.until(ExpectedConditions.alertIsPresent());
-        System.out.println(until.getText());
-        until.accept();
+        WebElement qcPopup = (WebElement) js.executeScript("return document.querySelector('shopee-banner-popup-stateful').shadowRoot.querySelector('div > div > div > div > div')");
+        qcPopup.click();
 
         //Tìm kiếm trên trang chủ
-        String xpathSearch = "//input[@class='shopee-searchbar-input__input']";
-        WebElement searchBox = (WebElement) js.executeScript("return document.evaluate(arguments[0], document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;", xpathSearch);
-        String inputText = "áo khoác nam";
-        js.executeScript("arguments[0].value = arguments[1];", searchBox, inputText);
-
+//        String xpathSearch = "//input[@class='shopee-searchbar-input__input']";
+//        WebElement searchBox = (WebElement) js.executeScript("return document.evaluate(arguments[0], document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;", xpathSearch);
+//        String inputText = "áo khoác nam";
+//        js.executeScript("arguments[0].value = arguments[1];", searchBox, inputText);
+        WebElement searchBox = driver.findElement(By.xpath("//*[contains(@class,'shopee-searchbar-input__input')]"));
+        searchBox.sendKeys("áo khoác nam");
+        WebElement searchButton = driver.findElement(By.xpath("//*[contains(@class,'shopee-searchbar__search-button')]"));
+        searchButton.click();
         // Click button tìm kiếm trên trang chủ shopee
         String jsCode = "document.getElementsByName('btnK')[0].click();";
         js.executeScript(jsCode);
 
-        driver.quit();
+        //driver.quit();
 
     }
 
