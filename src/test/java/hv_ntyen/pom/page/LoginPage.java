@@ -3,6 +3,7 @@ package hv_ntyen.pom.page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
     private WebDriver driver;
