@@ -31,7 +31,7 @@ public class TestSrollTest {
     public void setUp() throws MalformedURLException {
         System.setProperty(CONFIG_DRIVER_CHROME,  URL_SRC_CHROME);
         driver = new ChromeDriver();
-//        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.chrome());//web driver   RC  => chạy faile
+//        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.chrome());//webtrang driver   RC  => chạy faile
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
     }

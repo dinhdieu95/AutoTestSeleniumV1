@@ -23,7 +23,7 @@ public class AlertDemo {
 
         // Alert Message handling
 
-        driver.get("https://demo.guru99.com/test/delete_customer.php"); // truy cập trang web
+        driver.get("https://demo.guru99.com/test/delete_customer.php"); // truy cập trang webtrang
 //        driver.findElement(By.name("cusid")) => tìm kiếm phần tử có tên là custid
 //        sendKeys("53920") => nhập dữ liệu trên input
 

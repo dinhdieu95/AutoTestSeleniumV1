@@ -14,7 +14,7 @@ import static selenium.common.Common.URL_SRC_CHROME;
 
 public class AjaxTest {
 //     "Asynchronous JavaScript and XML" (JavaScript và XML không đồng bộ).
-//     giúp tạo ra các trang web động và phản hồi nhanh hơn
+//     giúp tạo ra các trang webtrang động và phản hồi nhanh hơn
     private String URL = "https://demo.guru99.com/test/ajax.html";
 
     WebDriver driver;

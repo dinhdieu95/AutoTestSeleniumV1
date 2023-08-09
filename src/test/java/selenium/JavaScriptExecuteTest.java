@@ -14,7 +14,7 @@ public class JavaScriptExecuteTest {
     public void alert() {
         System.setProperty(CONFIG_DRIVER_CHROME, URL_SRC_CHROME);
         driver = new ChromeDriver();
-        // Mở trang web
+        // Mở trang webtrang
         driver.get("https://demo.guru99.com/V4/");
 
         // Tạo đối tượng interface JavascriptExecutor bằng cách ép kiểu

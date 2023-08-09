@@ -22,7 +22,7 @@ public class ProxyTest {
         // config sử dụng trình duyệt nào "webdriver.chrome.driver"
 //        URL_SRC_CHROME đường dẫn tới file driver
         driver = new ChromeDriver(options);
-        driver.get("https://demo.guru99.com/test/delete_customer.php"); // truy cập trang web
+        driver.get("https://demo.guru99.com/test/delete_customer.php"); // truy cập trang webtrang
         driver.close();
     }
 }
