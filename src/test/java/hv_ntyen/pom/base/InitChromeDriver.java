@@ -17,25 +17,17 @@ public class InitChromeDriver {
         return driver;
     }
     @BeforeClass
-//    private static WebDriver setDriver() {
-//        System.out.println("Mo trinh duyet...");
-//        System.setProperty(CONFIG_DRIVER_CHROME, URL_SRC_CHROME);
-//        WebDriver driver = new ChromeDriver();
-//        driver.manage().window().maximize();
-//        driver.get("https://misast.mshopkeeper.vn/");
-//        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-//        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-//        return driver;
-//    }
-    private WebDriver setUp() {
+    private static WebDriver setDriver() {
+        System.out.println("Mo trinh duyet...");
         System.setProperty(CONFIG_DRIVER_CHROME, URL_SRC_CHROME);
-        String URL = "https://misast.mshopkeeper.vn/";
-        //create chrome instance
-        driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.navigate().to(URL);
+        driver.get("https://misast.mshopkeeper.vn/");
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         return driver;
     }
+
     @AfterClass
     public void closePage() throws Exception {
         Thread.sleep(2000);

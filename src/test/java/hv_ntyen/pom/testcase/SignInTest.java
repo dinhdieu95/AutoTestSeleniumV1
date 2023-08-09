@@ -15,6 +15,8 @@ import java.util.concurrent.TimeUnit;
 public class SignInTest {
     WebDriver driver;
     LoginPage loginPage;
+
+
 //    @BeforeTest
 //        public void setDriver() {
 //        System.out.println("Mo trinh duyet...");
