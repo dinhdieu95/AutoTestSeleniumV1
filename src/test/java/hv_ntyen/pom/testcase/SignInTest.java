@@ -29,6 +29,14 @@ public class SignInTest {
 //        System.out.println(driver);
 //
 //    }
+//@Test
+//public void signIn() throws Exception {
+//    System.out.println(driver);
+//    loginPage = new LoginPage(driver);
+//
+//    loginPage.signin("ntyen", "12345678@Abc");
+//
+//}
 
     @Test
     public void signIn() throws Exception {
