@@ -50,7 +50,7 @@ public class SignInTest {
         System.out.println(driver);
         loginPage = new LoginPage(driver);
 
-        loginPage.signin("ntyen", "12345678@Abc");
+        loginPage.signIn("ntyen", "12345678@Abc");
 
     }
 //    @AfterTest

@@ -11,7 +11,7 @@ public class LoginPage {
     private  By passwordInput = By.name("Password");
     private By loginButton = By.id("btnLogin");
     public LoginPage(WebDriver driver){
-        this.driver=driver;
+        this.driver= driver;
     }
     public void enterUsername(String username){
         WebElement usernameBox = driver.findElement(usernameInput);
@@ -28,7 +28,7 @@ public class LoginPage {
         if (signin.isDisplayed())
             signin.click();
     }
-    public void signin(String username, String password) throws Exception {
+    public void signIn(String username, String password) throws Exception {
         enterUsername(username);
         enterPassword(password);
         clickLoginButton();
