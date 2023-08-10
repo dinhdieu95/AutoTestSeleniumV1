@@ -10,9 +10,7 @@
 
         <classes>
 
-            <class name="example.selenium.CrossBrowserScriptTest">
-
-            </class>
+            <class name="example.selenium.CrossBrowserScriptTest"></class>
 
         </classes>
 

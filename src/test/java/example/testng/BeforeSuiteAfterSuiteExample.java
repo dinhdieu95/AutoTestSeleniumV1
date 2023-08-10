@@ -4,24 +4,24 @@ public class BeforeSuiteAfterSuiteExample {
     @BeforeSuite(alwaysRun = true, dependsOnGroups = {"setup"})
     public void setupSuite() {
         System.out.println("Before Suite: Setting up suite resources");
-    }
+    } // 1
 
-    @Test(groups = "setup")
+    @BeforeTest(groups = "setup")
     public void setupGroup() {
         System.out.println("Test Group: Setup resources for the tests");
-    }
+    }// 3
 
     @BeforeSuite(alwaysRun = true, dependsOnMethods = {"setupSuite"})
     public void beforeSuite() {
         System.out.println("Before Suite: Running common setup tasks");
-    }
+    }//2
 
     @Test(groups = {"group1"})
     public void testCase1() {
         System.out.println("Test Case 1");
     }
 
-    @Test(groups = {"group2"})
+    @Test(groups = {"group2"},dependsOnGroups = "group1")
     public void testCase2() {
         System.out.println("Test Case 2");
     }
@@ -31,8 +31,8 @@ public class BeforeSuiteAfterSuiteExample {
         System.out.println("Test Case 3");
     }
 
-    @BeforeSuite(enabled = false)
-    public void skippedSuite() {
-        System.out.println("This suite won't run");
-    }
+//    @BeforeSuite(dependsOnGroups = "group1")
+//    public void skippedSuite() {
+//        System.out.println("This suite won't run");
+//    }
 }
