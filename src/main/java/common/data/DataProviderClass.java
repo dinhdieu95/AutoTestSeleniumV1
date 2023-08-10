@@ -1,4 +1,4 @@
-package common;
+package common.data;
 
 import org.testng.annotations.DataProvider;
 
@@ -18,9 +18,9 @@ public class DataProviderClass {
     @DataProvider(name ="loginData")
     public static Object[][] getLoginData() {
         return new Object[][] {
-                {"Ramesh", "pass1"},
-                {"wrongusername", "pass1"},
-                {"Ramesh", "wrongpassword"}
+                {"Ramesh", "pass1", "1"},
+                {"wrongusername", "pass1","2"},
+                {"Ramesh", "wrongpassword", "3"}
         };
     }
     @DataProvider(name ="categories")

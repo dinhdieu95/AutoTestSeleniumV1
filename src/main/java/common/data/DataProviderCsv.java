@@ -1,4 +1,4 @@
-package common;
+package common.data;
 
 import org.testng.annotations.DataProvider;
 

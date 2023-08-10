@@ -1,7 +1,7 @@
 package example.testng;
 
 import org.testng.annotations.Test;
-import common.DataProviderClass;
+import common.data.DataProviderClass;
 
 public class DataProviderTest {
     @Test(dataProvider = "data-provider", dataProviderClass = DataProviderClass.class)

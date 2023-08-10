@@ -7,8 +7,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import page.LoginPage;
 import common.Common;
-import common.DataProviderClass;
-import common.DataProviderCsv;
+import common.data.DataProviderClass;
+import common.data.DataProviderCsv;
 
 import static com.codeborne.selenide.Selenide.open;
 import static common.Common.getSource;
@@ -20,8 +20,8 @@ public class LogInTest {
     }
 
     @Test(dataProvider = "loginData", dataProviderClass = DataProviderClass.class)
-    public void testcase2_login_to_tracker(String username, String password) {
-        System.out.println(username + password);
+    public void testcase2_login_to_tracker(String username, String password, String password2) {
+        System.out.println(username + password + "\b" + password2);
         WebDriver driver = WebDriverRunner.getWebDriver();
         LoginPage loginPage = new LoginPage(driver);
         Common.wait(driver, 10);
