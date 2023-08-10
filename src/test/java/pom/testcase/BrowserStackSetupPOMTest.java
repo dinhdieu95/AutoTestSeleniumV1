@@ -5,8 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pom.page.BrowserStackHomePage;
-import pom.page.BrowserStackSignUpPage;
+import page.BrowserStackHomePage;
+import page.BrowserStackSignUpPage;
 
 import static selenium.common.Common.CONFIG_DRIVER_CHROME;
 import static selenium.common.Common.URL_SRC_CHROME;

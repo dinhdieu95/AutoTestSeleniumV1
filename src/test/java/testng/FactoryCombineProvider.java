@@ -1,7 +1,7 @@
 package testng;
 
 import org.testng.annotations.*;
-import testng.common.DataProviderClass;
+import selenium.common.DataProviderClass;
 
 public class FactoryCombineProvider {
     String userName;
