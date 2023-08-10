@@ -1,6 +1,5 @@
 package selenium;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
@@ -11,8 +10,8 @@ import java.io.*;
 import java.util.Date;
 import java.util.StringTokenizer;
 
-import static selenium.common.Common.CONFIG_DRIVER_CHROME;
-import static selenium.common.Common.URL_SRC_CHROME;
+import static common.Common.CONFIG_DRIVER_CHROME;
+import static common.Common.URL_SRC_CHROME;
 
 public class CookieTest {
     WebDriver driver;

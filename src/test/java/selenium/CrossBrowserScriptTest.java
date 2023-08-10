@@ -10,7 +10,7 @@ import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
-import static selenium.common.Common.*;
+import static common.Common.*;
 
 public class CrossBrowserScriptTest {
     WebDriver driver;

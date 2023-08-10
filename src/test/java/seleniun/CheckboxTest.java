@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.checked;
 import static com.codeborne.selenide.Condition.selected;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static selenium.common.Common.getSource;
+import static common.Common.getSource;
 
 public class CheckboxTest {
     @BeforeTest

@@ -1,0 +1,10 @@
+package learnjava.run.dahinh.dto;
+
+public class Animal {
+    public void makeSound() {
+
+        System.out.println("Animal makes a sound");
+
+    }
+
+}

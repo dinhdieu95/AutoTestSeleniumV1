@@ -10,8 +10,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
-import static selenium.common.Common.CONFIG_DRIVER_CHROME;
-import static selenium.common.Common.URL_SRC_CHROME;
+import static common.Common.CONFIG_DRIVER_CHROME;
+import static common.Common.URL_SRC_CHROME;
 
 public class BrokenLinksV2Test {
     @Test

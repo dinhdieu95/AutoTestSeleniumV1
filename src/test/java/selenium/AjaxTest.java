@@ -12,8 +12,8 @@ import org.testng.annotations.Test;
 import page.guru.HomePage;
 //import pom.page.guru.HomePage;
 
-import static selenium.common.Common.CONFIG_DRIVER_CHROME;
-import static selenium.common.Common.URL_SRC_CHROME;
+import static common.Common.CONFIG_DRIVER_CHROME;
+import static common.Common.URL_SRC_CHROME;
 
 public class AjaxTest {
 //     "Asynchronous JavaScript and XML" (JavaScript và XML không đồng bộ).

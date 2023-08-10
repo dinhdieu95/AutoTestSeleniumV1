@@ -3,12 +3,12 @@ package selenium;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import selenium.page.SearchBy;
+import page.SearchBy;
 
 import static com.codeborne.selenide.Condition.checked;
 import static com.codeborne.selenide.Condition.selected;
 import static com.codeborne.selenide.Selenide.*;
-import static selenium.common.Common.getSource;
+import static common.Common.getSource;
 
 public class CheckboxTest {
     @BeforeClass

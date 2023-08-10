@@ -2,14 +2,7 @@ package selenium;
 
 //import Flash.FlashObjectWebDriver;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
-
-import static selenium.common.Common.CONFIG_DRIVER_CHROME;
-import static selenium.common.Common.URL_SRC_CHROME;
 
 public class FlashTest {
     WebDriver driver;

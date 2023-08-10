@@ -1,9 +1,6 @@
 package vdu;
 
-import dto.Childen;
-import dto.HinhVuong;
-import dto.Person;
-import dto.Yought;
+import learnjava.dto.HinhVuong;
 
 public class Oop {
     public static void main(String[] args) {

@@ -10,8 +10,8 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.List;
 
-import static selenium.common.Common.CONFIG_DRIVER_CHROME;
-import static selenium.common.Common.URL_SRC_CHROME;
+import static common.Common.CONFIG_DRIVER_CHROME;
+import static common.Common.URL_SRC_CHROME;
 
 public class DynamicTableTest {
     @Test

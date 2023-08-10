@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
-import static selenium.common.Common.getSource;
+import static common.Common.getSource;
 public class ByTextTest {
     @BeforeTest
     void openTestPage() {

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static selenium.common.Common.getSource;
+import static common.Common.getSource;
 
 public class ConditionsTest {
     @BeforeTest

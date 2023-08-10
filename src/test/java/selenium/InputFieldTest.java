@@ -3,11 +3,11 @@ package selenium;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import selenium.page.SearchBy;
+import page.SearchBy;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
-import static selenium.common.Common.getSource;
+import static common.Common.getSource;
 
 public class InputFieldTest {
     @BeforeClass

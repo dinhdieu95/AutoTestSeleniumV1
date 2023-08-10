@@ -22,7 +22,7 @@
         <property name="hibernate.connection.password">
             123456
         </property>
-        <mapping class="database.entity.Employee"/>
+        <mapping class="learnjava.database.entity.Employee"/>
 
     </session-factory>
 </hibernate-configuration>

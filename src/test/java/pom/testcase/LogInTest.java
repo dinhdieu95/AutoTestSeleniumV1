@@ -6,12 +6,12 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import page.LoginPage;
-import selenium.common.Common;
-import selenium.common.DataProviderClass;
-import selenium.common.DataProviderCsv;
+import common.Common;
+import common.DataProviderClass;
+import common.DataProviderCsv;
 
 import static com.codeborne.selenide.Selenide.open;
-import static selenium.common.Common.getSource;
+import static common.Common.getSource;
 
 public class LogInTest {
     @BeforeTest

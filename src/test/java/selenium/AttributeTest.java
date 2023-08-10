@@ -2,14 +2,13 @@ package selenium;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import selenium.page.SearchBy;
-import selenium.page.SearchByText;
+import page.SearchBy;
 
 import static com.codeborne.selenide.Condition.attribute;
 import static com.codeborne.selenide.Condition.attributeMatching;
 import static com.codeborne.selenide.Selectors.byAttribute;
 import static com.codeborne.selenide.Selenide.*;
-import static selenium.common.Common.getSource;
+import static common.Common.getSource;
 
 public class AttributeTest {
     @BeforeClass

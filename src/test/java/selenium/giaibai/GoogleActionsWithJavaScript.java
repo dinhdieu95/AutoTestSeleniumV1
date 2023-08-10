@@ -1,6 +1,5 @@
 package selenium.giaibai;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,8 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-import static selenium.common.Common.CONFIG_DRIVER_CHROME;
-import static selenium.common.Common.URL_SRC_CHROME;
+import static common.Common.CONFIG_DRIVER_CHROME;
+import static common.Common.URL_SRC_CHROME;
 
 public class GoogleActionsWithJavaScript {
     WebDriver driver;

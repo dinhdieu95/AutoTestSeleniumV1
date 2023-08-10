@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 import java.util.Iterator;
 import java.util.Set;
 
-import static selenium.common.Common.CONFIG_DRIVER_CHROME;
-import static selenium.common.Common.URL_SRC_CHROME;
+import static common.Common.CONFIG_DRIVER_CHROME;
+import static common.Common.URL_SRC_CHROME;
 
 public class SwitchWindow {
     WebDriver driver;

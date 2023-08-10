@@ -2,17 +2,12 @@ package selenium;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import selenium.common.Common;
 
-import java.time.Duration;
 import java.util.Map;
 
-import static selenium.common.Common.fluentWait;
+import static common.Common.fluentWait;
 
 public class FluentWaitTest {
     private WebDriver driver;

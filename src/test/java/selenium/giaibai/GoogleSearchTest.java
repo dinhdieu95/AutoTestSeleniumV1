@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-import static selenium.common.Common.*;
+import static common.Common.*;
 
 public class GoogleSearchTest {
     JavascriptExecutor js;

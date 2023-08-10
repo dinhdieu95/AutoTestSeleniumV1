@@ -1,7 +1,7 @@
 package testng;
 
 import org.testng.annotations.Test;
-import selenium.common.DataProviderClass;
+import common.DataProviderClass;
 
 public class DataProviderTest {
     @Test(dataProvider = "data-provider", dataProviderClass = DataProviderClass.class)
