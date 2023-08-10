@@ -1,4 +1,4 @@
-package vdu;
+package learnjava.vdu;
 
 import learnjava.dto.HinhVuong;
 
