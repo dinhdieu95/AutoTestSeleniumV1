@@ -128,13 +128,7 @@
             <version>3.141.59</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.11</version>
-            <scope>compile</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit -->
+         <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit -->
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-junit</artifactId>

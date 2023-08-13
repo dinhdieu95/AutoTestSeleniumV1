@@ -1,49 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite 1">
+    <listeners>
+        <!--        <listener class-name = "example.testng.report.CustomListener" />-->
 
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+        <listener class-name = "example.testng.report.CustomReporter" />
 
-<suite name="TestSuite" thread-count="2" parallel="tests">
-
-    <test name="ChromeTest">
-
-        <parameter name="browser" value="Chrome"/>
-
+    </listeners>
+    <test thread-count="5" name="AutoTestSeleniumV1">
+        <parameter name = "myName" value="manisha"/>
         <classes>
-
-            <class name="selenium.CrossBrowserScriptTest">
-
-            </class>
-
+            <class name="example.testng.ParameterizedTest"/>
         </classes>
-
-    </test>
-
-    <test name="FirefoxTest">
-
-        <parameter name="browser" value="Firefox"/>
-
-        <classes>
-
-            <class name="selenium.CrossBrowserScriptTest">
-
-            </class>
-
-        </classes>
-
-    </test>
-
-    <test name="EdgeTest">
-
-        <parameter name="browser" value="Edge"/>
-
-        <classes>
-
-            <class name="selenium.CrossBrowserScriptTest">
-
-            </class>
-
-        </classes>
-
-    </test>
-
+    </test> <!-- AutoTestSeleniumV1 -->
 </suite>

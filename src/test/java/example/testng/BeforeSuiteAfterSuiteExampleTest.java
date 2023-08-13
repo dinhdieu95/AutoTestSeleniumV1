@@ -1,6 +1,6 @@
 package example.testng;
 import org.testng.annotations.*;
-public class BeforeSuiteAfterSuiteExample {
+public class BeforeSuiteAfterSuiteExampleTest {
     @BeforeSuite(alwaysRun = true, dependsOnGroups = {"setup"})
     public void setupSuite() {
         System.out.println("Before Suite: Setting up suite resources");
@@ -11,19 +11,20 @@ public class BeforeSuiteAfterSuiteExample {
         System.out.println("Test Group: Setup resources for the tests");
     }// 3
 
-    @BeforeSuite(alwaysRun = true, dependsOnMethods = {"setupSuite"})
+    @BeforeSuite(enabled = false, dependsOnMethods = {"setupSuite"})
     public void beforeSuite() {
         System.out.println("Before Suite: Running common setup tasks");
     }//2
 
-    @Test(groups = {"group1"})
+    @Test(groups = {"group1"}, dependsOnMethods = "testCase3")
     public void testCase1() {
         System.out.println("Test Case 1");
     }
 
-    @Test(groups = {"group2"},dependsOnGroups = "group1")
+    @Test(groups = {"group2"},dependsOnGroups = "group1", testName = "Test thu test case 2")
     public void testCase2() {
         System.out.println("Test Case 2");
+
     }
 
     @Test(groups = {"group1", "group2"})
