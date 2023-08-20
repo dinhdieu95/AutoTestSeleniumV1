@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite 1">
+<suite name="Suite run provider">
     <listeners>
         <!--        <listener class-name = "example.testng.report.CustomListener" />-->
-
         <listener class-name = "example.testng.report.CustomReporter" />
-
+        <listener class-name = "org.testng.reporters.EmailableReporter2" />
     </listeners>
-    <test thread-count="5" name="AutoTestSeleniumV1">
-        <parameter name = "myName" value="Selenium"/>
+
+    <test name="AutoTestSeleniumV1" thread-count="5" parallel="true">
+        <parameter name = "myName" value="java"/>
         <classes>
-            <class name="example.testng.ParameterizedTest"/>
+            <class name="example.testng.DataProviderTest"/>
         </classes>
     </test> <!-- AutoTestSeleniumV1 -->
 </suite>

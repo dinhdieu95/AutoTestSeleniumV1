@@ -6,12 +6,13 @@ import common.data.DataProviderClass;
 import common.data.DataProviderCsv;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
+import org.testng.reporters.EmailableReporter;
 import page.LoginPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static common.Common.getSource;
 
-public class LogInTest {
+public class LogInTest  extends EmailableReporter {
     @BeforeGroups("login")
     public void beforeGroup() {
         System.out.println("Khoi tao khi bat dau group");

@@ -22,7 +22,10 @@
     </option>
     <option name="PROPERTIES_FILE" value="" />
     <properties />
-    <listeners />
+    <listeners>
+      <listener class="example.testng.CustomTestListener" />
+      <listener class="org.testng.reporters.EmailableReporter2" />
+    </listeners>
     <method v="2">
       <option name="Make" enabled="true" />
     </method>

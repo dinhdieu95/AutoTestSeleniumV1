@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]" parallel="tests">
-  <test name="FirefoxTest(failed)" parallel="tests">
-    <parameter name="browser" value="Firefox"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
+  <test name="AutoTestSeleniumV1(failed)">
     <classes>
-      <class name="selenium.CrossBrowserScriptTest">
+      <class name="example.testng.FactoryExampleTest$TestClass">
         <methods>
-          <include name="clean"/>
-          <include name="testParameterWithXML"/>
-          <include name="setup"/>
+          <include name="testMethod"/>
+          <include name="testMethod"/>
+          <include name="testMethod"/>
         </methods>
-      </class> <!-- selenium.CrossBrowserScriptTest -->
+      </class> <!-- example.testng.FactoryExampleTest$TestClass -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
-</suite> <!-- Failed suite [TestSuite] -->
+  </test> <!-- AutoTestSeleniumV1(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

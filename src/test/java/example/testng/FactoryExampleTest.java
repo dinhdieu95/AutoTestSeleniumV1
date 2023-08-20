@@ -1,6 +1,8 @@
 package example.testng;
 
-import org.testng.annotations.*;
+import common.data.DataProviderClass;
+import org.testng.annotations.Factory;
+import org.testng.annotations.Test;
 
 public class FactoryExampleTest {
     @Factory
@@ -20,9 +22,11 @@ public class FactoryExampleTest {
             this.instanceNumber = instanceNumber;
         }
 
-        @Test
-        public void testMethod() {
+        @Test(dataProvider = "loginData", dataProviderClass = DataProviderClass.class, timeOut = 5000)
+        public void testMethod(String userName, String pass, String pass2) {
             System.out.println("Test Method in instance: " + instanceNumber);
+            System.out.println("User: " + userName);
+            System.out.println("Password: " + pass);
         }
     }
 }

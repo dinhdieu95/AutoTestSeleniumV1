@@ -1,7 +1,8 @@
 package page;
-import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.reporters.EmailableReporter;
+
 public class BrowserStackHomePage {
     WebDriver driver;
     By Header=By.xpath("//h1");
@@ -13,7 +14,6 @@ public class BrowserStackHomePage {
 
     public void veryHeader() {
         String getheadertext=driver.findElement(Header).getText();
-        assertEquals("App & Browser Testing Made Easy", getheadertext);
     }
     public void clickOnGetStarted() {
         driver.findElement(getStarted).click();

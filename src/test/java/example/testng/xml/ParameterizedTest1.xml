@@ -5,12 +5,16 @@
 <!--        <listener class-name = "example.testng.report.CustomListener" />-->
 
         <listener class-name = "example.testng.report.CustomReporter" />
+        <listener class-name = "org.testng.reporters.EmailableReporter2" />
 
     </listeners>
-    <test thread-count="5" name="AutoTestSeleniumV1">
-        <parameter name = "myName" value="manisha"/>
+    <test thread-count="5" name="AutoTestSeleniumV1" parallel="true">
+<!--       thread-count="5":  chạy đồng thời trên tối đa 5 luồng
+           parallel: chạy song song nếu set true sẽ chạy song song , nếu = false sẽ là chạy đơn luồng
+-->
+        <parameter name = "myName" value="java"/>
         <classes>
-            <class name="example.testng.ParameterizedTest1"/>
+            <class name="example.testng.ParameterizedTest"/>
         </classes>
     </test> <!-- AutoTestSeleniumV1 -->
 </suite>
