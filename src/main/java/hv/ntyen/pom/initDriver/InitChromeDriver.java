@@ -1,4 +1,4 @@
-package hv_ntyen.pom.base;
+package hv.ntyen.pom.initDriver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

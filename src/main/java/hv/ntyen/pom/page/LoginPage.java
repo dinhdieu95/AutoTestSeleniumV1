@@ -1,9 +1,8 @@
-package hv_ntyen.pom.page;
+package hv.ntyen.pom.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
     private WebDriver driver;
@@ -28,10 +27,26 @@ public class LoginPage {
         if (signin.isDisplayed())
             signin.click();
     }
+    // Hàm lấy ra tên trang login
+    public String getTitel(){
+        String pageTitlePage = driver.getTitle();
+        return pageTitlePage;
+    }
+    // Hàm check trang đăng nhập đã mở ra hay chưa
+    public boolean verifySigninPageTitle(){
+        String expectedSigninTitle = "MISA eShop - Đăng nhập";
+        return getTitel().equals(expectedSigninTitle);
+    }
+    // Hàm thực hiện login
     public void signIn(String username, String password) throws Exception {
         enterUsername(username);
         enterPassword(password);
         clickLoginButton();
         Thread.sleep(1000);
+    }
+    // Hàm kiểm tra đã login thành công hay chưa
+    public boolean verifyHomePageTitel(){
+        String expectedHomePageTitle = "home";
+        return getTitel().contains(expectedHomePageTitle);
     }
 }

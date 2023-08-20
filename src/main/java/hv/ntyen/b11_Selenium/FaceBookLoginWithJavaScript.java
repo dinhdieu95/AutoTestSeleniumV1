@@ -1,4 +1,4 @@
-package hv_ntyen;
+package hv.ntyen.b11_Selenium;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
