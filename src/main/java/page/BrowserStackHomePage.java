@@ -1,7 +1,7 @@
 package page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.reporters.EmailableReporter;
+//import org.testng.reporters.EmailableReporter;
 
 public class BrowserStackHomePage {
     WebDriver driver;
